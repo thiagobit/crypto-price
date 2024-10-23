@@ -2,9 +2,10 @@
 
 This application consists in get the price history in USD of a given crypto coin using [CoinGeckoAPI](https://docs.coingecko.com/reference/introduction).
 * It works with BTC, BCH, LTC, ETH, DACXI, LINK, USDT, XLM, DOT, ADA, SOL, AVAX, LUNC, MATIC, USDC, BNB, XRP, UNI, MKR, BAT, SAND, and EOS.
-* There is a _docker-composer.yml_ file to facilitate the environment setup with _Docker_.
 * It's using _Laravel 5.6_ with _PHP-FPM 7.1_, _MySQL 5.7_, _Nginx_ and _Composer 2.2_ to install dependencies.
-* The webserver is set to use port _8080_.
+* There is a _docker-composer.yml_ file to facilitate the environment setup with _Docker_.
+* The Docker webserver is set to use port _8080_.
+* This application is hosted on AWS and you can use _http://ec2-18-230-206-92.sa-east-1.compute.amazonaws.com_ for testing purposes.
 
 ## Requirements
 - [Docker](https://docs.docker.com/engine/install/)
@@ -63,7 +64,7 @@ docker-compose exec app php vendor/bin/phpunit
     - Type: `string`
     - Required: `false`
 
-- Example: `GET http://localhost:8080/api/v1/coin/BTC/price/?datetime=2024-10-21T14:30:00Z`
+- Example: `GET http://ec2-18-230-206-92.sa-east-1.compute.amazonaws.com/api/v1/coin/BTC/price/?datetime=2024-10-21T14:30:00Z`
   - Output:
     ```json
     {
