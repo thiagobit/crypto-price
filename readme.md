@@ -64,7 +64,7 @@ docker-compose exec app php vendor/bin/phpunit
     - Type: `string`
     - Required: `false`
 
-- Example: `GET http://ec2-18-230-206-92.sa-east-1.compute.amazonaws.com/api/v1/coin/BTC/price/?datetime=2024-10-21T14:30:00Z`
+- Example: `curl "http://ec2-18-230-206-92.sa-east-1.compute.amazonaws.com/api/v1/coin/BTC/price/?datetime=2024-10-21T14:30:00Z"`
   - Output:
     ```json
     {
